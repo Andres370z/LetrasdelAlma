@@ -1,0 +1,123 @@
+<!-- contact
+    ================================================== -->
+<section id="contact" class="s-contact">
+
+    <div class="overlay"></div>
+    <div class="contact__line"></div>
+
+    <div class="row section-header" data-aos="fade-up">
+        <div class="col-full">
+            <h3 class="subhead">En esta seccion podras</h3>
+            <h1 class="display-2 display-2--light">"Pedirme la letra de cualquier canción, gratis."</h1>
+        </div>
+    </div>
+
+    <div class="row contact-content" data-aos="fade-up">
+
+        <div class="contact-primary">
+
+            <h3 class="h6">Enviame un mensaje</h3>
+
+            <form novalidate="novalidate" [formGroup]="userForm" (ngSubmit)="onSubmit(userForm.value)">
+                <fieldset>
+
+                    <div class="form-field">
+                        <input name="contactName" type="text" id="contactName" placeholder="Escribe tu nombre" value=""
+                            minlength="2" required="" aria-required="true" class="full-width" formControlName="name"
+                            autocomplete="off">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactEmail" type="email" id="contactEmail" placeholder="Escribe tu email"
+                            value="" required="" aria-required="true" class="full-width" formControlName="email"
+                            autocomplete="off">
+                    </div>
+
+                    <div class="form-field">
+                        <textarea name="contactMessage" id="contactMessage"
+                            placeholder="Escribe el nombre de la cancion y del artista" rows="10" cols="50" required=""
+                            aria-required="true" class="full-width" formControlName="message"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <button class="full-width btn--primary" type="submit">Enviar Solicitud</button>
+                        <div class="submit-loader">
+                            <div class="text-loader">Sending...</div>
+                            <div class="s-loader">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="cinfo" style="margin-top: 18px; text-align: center;">
+                        <h5>Recuerda que es totalmente gratis</h5>
+
+                    </div>
+
+                </fieldset>
+            </form>
+
+            <!-- contact-warning -->
+            <div class="message-warning">
+                Something went wrong. Please try again.
+            </div>
+
+            <!-- contact-success -->
+            <div class="message-success">
+                Your message was sent, thank you!<br>
+            </div>
+
+        </div> <!-- end contact-primary -->
+
+        <div class="contact-secondary">
+            <div class="contact-info">
+
+                <h3 class="h6 hide-on-fullwidth">Que debes hacer?</h3>
+
+                <div class="cinfo">
+                    <h5>Tu informacion</h5>
+                    <p>
+                        En este formulario, puedes solicitar de manera completamente gratuita la letra de una canción.
+                        Por favor, asegúrate de escribir correctamente tu correo para poder comunicarme contigo cuando
+                        la canción esté lista y publicada.
+                    </p>
+                </div>
+
+                <div class="cinfo">
+                    <h5>Que sucedera</h5>
+                    <p>
+                        Al hacer clic en 'Enviar', recibiré tu solicitud.
+                        El tiempo de respuesta puede variar entre 2 y 7 días, dependiendo de la cantidad de solicitudes.
+                        Cuando tu canción esté lista, te enviaré un correo a la dirección que registraste.
+                    </p>
+                </div>
+
+
+
+                <ul class="contact-social">
+
+                    <li>
+                        <a (click)="sendMail()"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@letrasdelalma9782" target="_blank"><i
+                                class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.tiktok.com/@letrasdelalma58?is_from_webapp=1&sender_device=pc"
+                            target="_blank"><i class="bi bi-tiktok"></i></a> <!-- TikTok -->
+                    </li>
+                </ul> <!-- end contact-social -->
+
+            </div> <!-- end contact-info -->
+        </div> <!-- end contact-secondary -->
+
+    </div> <!-- end contact-content -->
+
+</section> <!-- end s-contact -->
+
+
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="small" color="#fff" type="square-jelly-box" [fullScreen]="true">
+    <p style="color: white"> Espera un momento... </p>
+</ngx-spinner>

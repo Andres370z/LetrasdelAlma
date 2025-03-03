@@ -1,0 +1,64 @@
+<section id='works' class="s-works">
+
+
+  <div class="intro-wrap">
+
+    <div class="row section-header has-bottom-sep light-sep" data-aos="fade-up">
+      <div class="col-full">
+        <h3 class="subhead">Descarga aqui</h3>
+        <h1 class="display-2 display-2--light">Si deseas descargar un video solo sigue las instrucciones</h1>
+      </div>
+    </div> <!-- end section-header -->
+    <div class="row about-desc" data-aos="fade-up">
+      <div class="col-full">
+        <p style="font-style: italic;">
+          Si deseas obtener el video de la letra de una canción, simplemente selecciona la que prefieras. El enlace del
+          video se copiará automáticamente en tu portapapeles y, a continuación, serás redirigido a una página de
+          descarga.
+          Una vez allí, solo debes pegar el enlace en el campo correspondiente. Para hacerlo, mantén presionado en el
+          campo del formulario y luego selecciona la opción 'Pegar'.
+        </p>
+      </div>
+    </div>
+
+  </div> <!-- end intro-wrap -->
+
+
+  <div class="row works-content"> 
+    <div class="col-full masonry-wrap">
+      <div class="masonry">
+        <div class="container">
+          <section class="cards">
+
+            <article class="card card--1" *ngFor="let song of songs" (click)="copyEnd(song.link_video)">
+              <div class="card__img"></div>
+              <a href="#" class="card_link">
+                <div class="card--1 card__img--hover" [ngStyle]="{'background-image': 'url(' + song.image + ')'}"></div>
+              </a>
+              <div class="card__info">
+                <span class="card__category"><i class="fa fa-star" aria-hidden="true"></i> {{song.title}} <i
+                    class="fa fa-star" aria-hidden="true"></i></span>
+                <h3 class="card__title"> {{song.author}} </h3>
+                <p> {{song.requeriments}} </p>
+                <span class="card__by">by <a href="#" class="card__author" title="author">Letras del Alma</a></span>
+              </div>
+            </article>
+
+          </section>
+          <div class="credit">Made with <span style="color:#072f5f">❤</span> by <a href="">Letras del Alma</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+</section> <!-- end s-works -->
+
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="square-jelly-box" [fullScreen]="true">
+  <p style="color: white"> Espera un momento... </p>
+</ngx-spinner>
+<div class="row">

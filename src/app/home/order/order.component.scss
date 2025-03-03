@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+
+
+.cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1100px;
+}
+
+/* Asegurar 3 tarjetas en PC */
+.card {
+    width: 30% !important;
+    /* 3 tarjetas por fila */
+    margin: 15px !important;
+}
+
+.card--1 .card__img,
+.card--1 .card__img--hover {
+    background-image: url('https://i.ytimg.com/vi/u0lmeeve60E/maxres2.jpg');
+}
+
+.card--2 .card__img,
+.card--2 .card__img--hover {
+    background-image: url('https://cdn.pixabay.com/photo/2017/02/19/15/28/sunset-2080072__340.jpg');
+}
+
+.card--3 .card__img,
+.card--3 .card__img--hover {
+    background-image: url('https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__340.jpg');
+}
+
+.card__img {
+    visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 235px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.card__img--hover {
+    transition: 0.2s all ease-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+    height: 235px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    top: 0;
+}
+
+.card {
+    margin: 25px;
+    transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+    background-color: #fff;
+    width: 30%;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: scale(1.10, 1.10);
+}
+
+.card__info {
+    z-index: 2;
+    background-color: #fff;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 16px 24px 24px 24px;
+}
+
+.card__category {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.card__title {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+
+p {
+    color: #808080;
+}
+
+.card__by {
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.card__author {
+    font-weight: 600;
+    text-decoration: none;
+    color: crimson;
+}
+
+
+.credit {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 100%;
+}
+
+.credit a {
+    text-decoration: none;
+    color: #330000;
+    font-weight: bold;
+}
+
+@media (max-width: 992px) {
+    .card {
+        width: 45% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100% !important;
+        margin: 15px 0 !important;
+    }
+}

@@ -1,0 +1,64 @@
+<router-outlet></router-outlet>
+
+<!-- home
+    ================================================== -->
+<section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="./../../assets/images/fondo-home.jpg"
+    data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+    <div class="overlay"></div>
+    <div class="shadow-overlay"></div>
+
+    <div class="home-content">
+
+        <div class="row home-content__main">
+
+            <h3>Bienvenido a</h3>
+
+            <h1>
+                Letras
+                del 
+                Alma <br>
+            </h1>
+
+            <h3 style="font-style: italic;">"Las mejores canciones con letras del alma <br>y sentimientos de corazón"</h3>
+
+            <div class="home-content__buttons">
+                <a (click)="navigate('contact')" class="smoothscroll btn btn--stroke">
+                    Pedir Lyrics
+                </a>
+                <a (click)="navigate('order')" class="smoothscroll btn btn--stroke">
+                    Descargar video
+                </a>
+            </div>
+
+        </div>
+
+        <div class="home-content__scroll">
+            <a href="#about" class="scroll-link smoothscroll">
+                <span>Scroll Down</span>
+            </a>
+        </div>
+
+        <div class="home-content__line"></div>
+
+    </div> <!-- end home-content -->
+
+
+    <ul class="home-social">
+
+            <li>
+                <a (click)="sendMail()"><i class="fa fa-envelope-o" aria-hidden="true"><span>Email</span></i></a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@letrasdelalma9782" target="_blank"><i
+                        class="fa fa-youtube-play" aria-hidden="true"><span>YouTube</span></i></a>
+            </li>
+            <li>
+                <a href="https://www.tiktok.com/@letrasdelalma58?is_from_webapp=1&sender_device=pc"
+                    target="_blank"><i class="bi bi-tiktok"><span>TikTok</span></i></a> <!-- TikTok -->
+            </li>
+    </ul>
+    <!-- end home-social -->
+
+</section> <!-- end s-home -->
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "small" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Espera un momento... </p></ngx-spinner>
