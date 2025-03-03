@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit,AfterViewInit {
+export class HeaderComponent implements OnInit {
 
   constructor(
     private router: Router,
@@ -14,23 +14,23 @@ export class HeaderComponent implements OnInit,AfterViewInit {
 
   ngOnInit(): void {
   }
-  ngAfterViewInit() {
-    this.cargarScripts();
-  }
+  // ngAfterViewInit() {
+  //   // this.cargarScripts();
+  // }
 
-  cargarScripts() {
-    const scripts = [
-      'assets/js/main.js',
-      'assets/js/plugins.js'
-    ];
+  // cargarScripts() {
+  //   const scripts = [
+  //     'assets/js/main.js',
+  //     'assets/js/plugins.js'
+  //   ];
     
-    scripts.forEach(scriptUrl => {
-      const script = document.createElement('script');
-      script.src = scriptUrl;
-      script.async = true;
-      document.body.appendChild(script);
-    });
-  }
+  //   scripts.forEach(scriptUrl => {
+  //     const script = document.createElement('script');
+  //     script.src = scriptUrl;
+  //     script.async = true;
+  //     document.body.appendChild(script);
+  //   });
+  // }
 
   navigate(ruta: string){
     this.router.navigate([ruta])

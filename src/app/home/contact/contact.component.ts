@@ -11,7 +11,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit, AfterViewInit {
+export class ContactComponent implements OnInit {
   public userForm: FormGroup;
   constructor(
     private mailService: SendMailService,
@@ -22,7 +22,6 @@ export class ContactComponent implements OnInit, AfterViewInit {
   ) { }
 
   ngOnInit(): void {
-
     this.myForm();
   }
 
@@ -77,25 +76,11 @@ export class ContactComponent implements OnInit, AfterViewInit {
 
 
 
-  ngAfterViewInit() {
-    // this.cargarScripts();
-  }
+  
 
-  cargarScripts() {
-    const scripts = [
-      './../../../assets/js/main.js',
-      './../../../assets/js/plugins.js',
-    ];
-
-    scripts.forEach(scriptUrl => {
-      if (!document.querySelector(`script[src="${scriptUrl}"]`)) {
-        const script = document.createElement('script');
-        script.src = scriptUrl;
-        script.async = true;
-        document.body.appendChild(script);
-      }
-    });
-  }
+  
+  
+  
   sendMail() {
     console.log('trabajando')
     const email = 'letrasdelalma777@gmail.com'

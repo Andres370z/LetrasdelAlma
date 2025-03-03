@@ -28,12 +28,11 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/aos/dist/aos.css",
               "src/styles.scss"
             ],
             "scripts": [
-              "src/assets/js/jquery-3.2.1.min.js",
-              "src/assets/js/plugins.js",
-              "src/assets/js/main.js"
+              
             ]
           },
           "configurations": {
@@ -100,14 +99,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/aos/dist/aos.css",
               "src/styles.scss",
-              "node_modules/ngx-spinner/animations/ball-scale-multiple.css",
-              "node_modules/sweetalert2/dist/sweetalert2.min.css"
+              "node_modules/ngx-spinner/animations/ball-scale-multiple.css"
             ],
             "scripts": [
-              "src/assets/js/jquery-3.2.1.min.js",
-              "src/assets/js/plugins.js",
-              "src/assets/js/main.js"
+              
             ]
           }
         }

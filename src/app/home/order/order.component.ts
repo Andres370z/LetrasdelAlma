@@ -32,7 +32,7 @@ export class OrderComponent implements OnInit {
       this.songs = res
     }, (error: any) => {
       this.spinner.hide();
-      this.alertService.errorNotifi('Ups', 'No logre cargar la info. Vuelve mas tarde')
+      console.log('No logre hacerlo')
     })
   }
 
