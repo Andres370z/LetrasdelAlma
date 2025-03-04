@@ -11,7 +11,7 @@ import { OrdersService } from 'src/app/services/orders.service';
 })
 export class OrderComponent implements OnInit { 
   public songs: any[] = [];
-  private urlDwd: string = 'https://ssyoutube.com/es129mN/'
+  private urlDwd: string = 'https://ssstik.io/es'
   constructor(
     private spinner: NgxSpinnerService,
     private _placeService: OrdersService,
